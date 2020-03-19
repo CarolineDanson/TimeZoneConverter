@@ -24,39 +24,41 @@
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">Country</th>
+                    <th scope="col">City</th>
                     <th scope="col">Timezone</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Choose country and timezone to convert from</th>
+                    <th scope="row">Enter city and timezone to convert from</th>
                     <!--Textruta att mata in land-->
                     <td><br>
-                        <input type="text" class="form-control" id="namn" placeholder="Enter country"></td>
+                        <input type="text" class="form-control" id="city1" name ="city1" placeholder="Enter city"></td>
                      <!--Textruta att mata in tidszon-->
                     <td><br>
-                        <input type="text" class="form-control" id="namn" placeholder="Enter timezone"></td>
+                        <input type="text" class="form-control" id="utc1" name ="utc1" placeholder="Enter timezone"></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">Choose country and timezone to convert to</th>
+                    <th scope="row">Enter city and timezone to convert to</th>
                         <!--Textruta att mata in land-->
                         <td><br>
-                            <input type="text" class="form-control" id="namn" placeholder="Enter country"></td>
+                            <input type="text" class="form-control" id="city2" name ="city2" placeholder="Enter city"></td>
                          <!--Textruta att mata in tidszon-->
                         <td><br>
-                            <input type="text" class="form-control" id="namn" placeholder="Enter timezone"></td>
+                            <input type="text" class="form-control" id="utc2" name ="utc2" placeholder="Enter timezone"></td>
                         <td></td>
                       </tr>
                   <!--Visa tidsskillnaden-->
                   <tr>
                     <th scope="row">Converted time difference</th>
                     <td><!--Knapp för att köra igång konverteringen-->
-                        <br><button type="submit" class="btn btn-primary">Convert now</button>
+                        <br><button class="btn btn-primary" onclick="calcTimeZones()">Convert now</button>
                     </td>
-                    <td>RESULT</td>
+                    <td>RESULT
+                        <span id="result"></span>
+                    </td>
                     </tr>
 
                 </tbody>
@@ -70,5 +72,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="timezonejs.js"></script>
 </body>
 </html>
