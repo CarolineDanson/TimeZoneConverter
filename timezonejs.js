@@ -15,7 +15,7 @@ let utc = utc + (3600000 * offset);
 let nd = new Date();
 document.writeln("Bombay time is " + nd.toLocaleString() + "<br>");*/
 
-let city1 = document.getElementById("city1").value;
+let city1 = document.getElementById("timezone").value;
 let utc1 = document.getElementById("city1").value;
 
 let city2 = document.getElementById("city2").value;
@@ -23,9 +23,28 @@ let utc2 = document.getElementById("utc2").value;
 
 let result;
 
+
+/*function GetSelectedText(){
+    var e = document.getElementById("timezone1");
+    var result = e.options[e.selectedIndex].text;
+    
+    document.getElementById("result").innerHTML = result;
+}*/
+
+function GetSelectedValue(){
+    var e = document.getElementById("timezone1");
+    var b = document.getElementById("timezone2");
+    var result2 = e.options[e.selectedIndex].value;
+    var result3 = b.options[e.selectedIndex].value;
+    var sum = result2 + result3;
+    
+    document.getElementById("result").innerHTML = result2;
+}
+
+
 function calcTimeZones() {
 
-    // create Date object for current location
+   /* // create Date object for current location
     let d = new Date();
 
     // convert to msec
@@ -39,7 +58,7 @@ function calcTimeZones() {
     //let nd = new Date((utc1 + (3600000 * offset) - (utc2 + (3600000 * offset)));
 
     // return time as a string
-    return document.getElementById("result").innerText = "The time difference between" + city1 + " & " + city2 + " is " +(td).toFixed(2);
+    return document.getElementById("result").innerText = "The time difference between" + city1 + " & " + city2 + " is " +(td).toFixed(2);*/
 }
 
 
