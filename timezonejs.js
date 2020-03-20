@@ -1,19 +1,18 @@
-let city1 = document.getElementById("timezone").value;
-let utc1 = document.getElementById("city1").value;
-
-let city2 = document.getElementById("city2").value;
-let utc2 = document.getElementById("utc2").value;
-
 let result;
 
 let mt;
 
+d = new Date();
+
 // convert to msec since Jan 1 1970
 localTime = d.getTime();
 
+var lokaltid = new Date();
+lokaltid.setHours(lokaltid.getHours());
+
 // obtain local UTC offset and convert to msec
 localOffset = d.getTimezoneOffset() * 60000;
-document.getElementById("mt").innerHTML = "hej";
+document.getElementById("mt").innerHTML = lokaltid;
 
 
 
